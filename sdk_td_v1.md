@@ -35,6 +35,6 @@ Convert Java code that uses AWS SDK v1 to use AWS SDK v2.
 
 ## Important Verification Criteria
 - Do not add new dependencies to build files if they are already included as transitive dependencies of other necessary dependencies. For example, `software.amazon.awssdk:auth:2.21.42` is a transitive dependency of `software.amazon.awssdk:s3:2.21.42`. If `s3` needs to be upgraded, it is redundant to also add the `auth` dependency to the build file. If needed, you can use `./gradle dependencies --configuration runtimeClasspath` to show all project dependencies, with the transitive ones being indented within their parent dependencies.
-- Review the plan.json generated at the beginning (including any feedback provided to the plan by the user) to ensure each step was performed as stated. Pay special attention to multi-module apps: ensure that each module containing AWS SDK dependencies is upgraded as specified in the plan.
+- Review the `plan.json` generated at the beginning (including any feedback provided to the plan by the user) to ensure each step was performed as stated. Pay special attention to multi-module apps: ensure that each module containing AWS SDK dependencies is upgraded as specified in the plan.
 - Do not create brand new files to upgrade to AWS SDK V2: replace existing V1 functionality instead. However, new test files are acceptable, if needed.
-- Do not terminate the transformation before going through each of these verification criteria.
+- Do not terminate the transformation before carefully going through each of these verification criteria.
