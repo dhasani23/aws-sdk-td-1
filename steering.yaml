@@ -1,0 +1,2 @@
+additionalPlanContext: >
+  Only upgrade the STS dependency from the AWS SDK to V2.
