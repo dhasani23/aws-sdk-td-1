@@ -35,4 +35,4 @@ Convert Java code that uses AWS SDK v1 to use AWS SDK v2.
 
 ## Important Verification Criteria
 - Pay special attention to multi-module apps: ensure that each module containing AWS SDK dependencies is upgraded exactly as specified in the plan.
-- Do NOT create any new files when upgrading to AWS SDK V2: instead, replace V1 functionality in existing files. In other words, do NOT use a side-by-side migration approach that results in both V1 and V2 code coexisting.
+- Do NOT create any new files when upgrading to AWS SDK V2: instead, replace V1 functionality in existing files. In other words, do NOT use a side-by-side migration approach that results in both V1 and V2 code coexisting. Do NOT keep the old V1 dependencies in any build files.
