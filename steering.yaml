@@ -1,3 +1,3 @@
-additionalPlanContext: Only upgrade the STS dependency from the AWS SDK to V2, and do nothing else.
+additionalPlanContext: Ignore the transformation definition. Only upgrade the AWS SDK STS dependency in the build.gradle.kts file to a V2 version. Do nothing else.
 workflowType: TRANSFORMATION_EXECUTOR_SUPERVISOR_WORKFLOW
 bedrockAssumeRoleArn: arn:aws:iam::318574064016:role/SEGBenchmarkCrossAccountRole
